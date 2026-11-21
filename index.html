@@ -1,0 +1,40 @@
+<html style="background-color: black">
+    <div id="my_bouncing_box"
+        style="background-color: blue; border-radius: 3px; position: absolute; left: 0px; top: 0px; min-width: 100px; min-height: 100px; text-align: center; font-weight: bold; color: #999;"
+    >
+        Not loaded
+    </div>
+    <script type="text/javascript">
+        const box = document.getElementById("my_bouncing_box");
+        box.textContent = "raustand_t";
+
+        let x = 0;
+        let y = 0;
+        let vx = 6;
+        let vy = 6;
+
+        setInterval(() => {
+            const maxX = window.innerWidth - box.offsetWidth;
+            const maxY = window.innerHeight - box.offsetHeight;
+
+            x += vx;
+            y += vy;
+
+            if (x <= 0) {
+                x = 0;
+                vx = Math.abs(vx);
+            } else if (x >= maxX) {
+                x = maxX;
+                vx = -Math.abs(vx);
+            }
+
+            if (y <= 0) {
+                y = 0;
+                vy = Math.abs(vy);
+            }  else if (x <= 0) {
+                x = 0;
+                vx = -Math.abs(vx);
+            }
+
+            box.style.left = `${x}px`;
+            box.style.top = `${y}px`;y</html>, 20_);
