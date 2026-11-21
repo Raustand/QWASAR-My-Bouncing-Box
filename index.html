@@ -31,10 +31,14 @@
             if (y <= 0) {
                 y = 0;
                 vy = Math.abs(vy);
-            }  else if (x <= 0) {
-                x = 0;
-                vx = -Math.abs(vx);
+            }  else if (y >= maxY) {
+                y = maxY;
+                vy = -Math.abs(vy);
             }
 
             box.style.left = `${x}px`;
-            box.style.top = `${y}px`;y</html>, 20_);
+            box.style.top = `${y}px`;
+        }, 20);
+
+    </script>
+</html>
